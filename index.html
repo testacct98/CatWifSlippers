@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CatWifSlippers</title>
+<style>
+footer {
+  background: #000;
+  padding: 120px 20px;
+  text-align: center;
+  color: white;
+}
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      font-size: 18px;
+      overflow-x: hidden;
+    }
+    video#bgVideo {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      z-index: -1;
+      object-fit: cover;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: rgba(0,0,0,0.7);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    header .branding {
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      height: 50px;
+      margin-right: 10px;
+    }
+    header h1 {
+      font-size: 1.6em;
+    }
+    header .buttons button {
+      margin-left: 10px;
+      padding: 10px 18px;
+      background: linear-gradient(135deg, #ffda7d, #fcb045);
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+    .section {
+      text-align: center;
+      padding: 100px 40px;
+      backdrop-filter: blur(4px);
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px black;
+    }
+    .section p {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      max-width: 900px;
+      line-height: 1.7;
+      font-size: 1.2em;
+    }
+    .columns {
+      justify-content: center;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    .column {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 25px;
+      border-radius: 20px;
+      font-size: 1.4em;
+      font-weight: 500;
+      box-shadow: 
+        0 4px 8px rgba(0, 0, 0, 0.6),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+      transform: perspective(800px) rotateX(2deg);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+    .column:hover {
+      transform: perspective(800px) translateY(-10px) scale(1.02);
+      box-shadow: 
+        0 10px 20px rgba(0, 0, 0, 0.8),
+        inset 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+      flex: 1;
+      min-width: 280px;
+      background: rgba(255,255,255,0.15);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+      text-align: center;
+    }
+    #caDisplay {
+  display: none;
+  margin: 40px auto;
+  padding: 25px 30px;
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.75);
+  border: 2px solid #ffda7d;
+  border-radius: 20px;
+  font-size: 1.3em;
+  text-align: center;
+  box-shadow: 0 8px 18px rgba(255,255,255,0.1);
+  font-weight: bold;
+  color: #ffda7d;
+}
+    .tinted-1 { background-color: rgba(0, 0, 0, 0.6); }
+    .tinted-2 { background-color: rgba(255, 140, 0, 0.3); }
+    .tinted-3 { background-color: rgba(0, 120, 255, 0.2); }
+    .tinted-4 { background-color: rgba(180, 120, 60, 0.25); }
+    .tinted-5 { background-color: rgba(150, 80, 255, 0.25); }
+    @media(max-width: 768px) {
+      body { font-size: 16px; }
+      .columns {
+      justify-content: center;
+      text-align: center; flex-direction: column; }
+    }
+  </style>
+<script>
+    function toggleCA() {
+      const ca = document.getElementById('caDisplay');
+      ca.style.display = ca.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+<video autoplay="" id="bgVideo" loop="" muted="">
+<source src="assets/background.mp4" type="video/mp4"/>
+</video>
+<header>
+<div class="branding">
+<img alt="logo" src="assets/logo.png"/>
+<h1>CatWifSlippers</h1>
+</div>
+<div class="buttons">
+<button onclick="toggleCA()">Buy Now</button>
+<button onclick="window.open('https://x.com/CatwifSlippers', '_blank')">Twitter</button>
+</div>
+</header>
+<div id="caDisplay">CA: 7qxD7sEYSKEY8foKZTpU2Za1CotGoGArKADEasoLpump</div>
+<section class="section tinted-1">
+<h2>✨ The Legend Begins</h2>
+<p>The ancient prophecy was whispered between alley cats. One ginger feline would rise… armed with stolen slippers 🥿, and the power of the paw 🐾.</p>
+</section>
+<section class="section tinted-2">
+<img alt="Slipper Fight" src="assets/image1.jpg" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); margin: 30px auto; display: block;"/>
+<h2>🐱 About</h2>
+<p>Not every hero wears boots — some steal slippers. From sofas to sidewalks, this cat has declared war on footwear. Every bite, every scratch, every slipper hidden under the couch… was destiny.</p>
+</section>
+<section class="section tinted-3">
+<h2>🛒 How to Buy</h2>
+<div class="columns">
+<div class="column">📲 <strong>1. Get a Wallet</strong><br/>Use Phantom or Solflare.</div>
+<div class="column">💸 <strong>2. Fund with SOL</strong><br/>Buy SOL &amp; send to wallet.</div>
+<div class="column">🤖 <strong>3. Use BonkBot</strong><br/>Paste CA, swap fast.</div>
+<div class="column">🎉 <strong>4. Join The Cult</strong><br/>You're now a slipper soldier.</div>
+</div>
+</section>
+<section class="section tinted-4">
+<h2>📊 Tokenomics &amp; Roadmap</h2>
+<div class="columns">
+<div class="column">
+<h3>💰 Tokenomics</h3>
+<p>Supply: 1,000,000,000<br/>Tax: 0%<br/>90% Burned<br/>10% Slipper Vault</p>
+</div>
+<div class="column">
+<h3>📅 Roadmap</h3>
+<p>1. Slipper Hunt 🥿<br/>2. Meme Domination 😂<br/>3. Global Pawprint 🌍<br/>4. Household Takeover 👑</p>
+</div>
+</div>
+</section>
+<section class="section tinted-5">
+<h2>📖 Legendary Tale</h2>
+<p>In a world ruled by laces and leather… one slipper-thieving cat said: “Enough.” The paw has spoken. The timeline is broken. And the slippers shall rise. 🐾🥿</p>
+</section>
+<footer>
+    © 2025 CatWifSlippers. All rights reserved.
+  </footer>
+</body>
+</html>
